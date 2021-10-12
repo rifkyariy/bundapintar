@@ -250,7 +250,7 @@ export default {
       const gender = this.gender
       const weight = this.weight
       const height = this.height
-      const birthdate = new Date(this.birthdate)
+      const birthdate = this.birthdate
       const age = this.calculateMonth(birthdate)
 
       // eslint-disable-next-line no-console
@@ -261,7 +261,7 @@ export default {
         gender,
         weight,
         height,
-        birthdate.getFullYear()
+        birthdate
       )
 
       if (ageRange === 0) {
@@ -286,6 +286,7 @@ export default {
       }
     },
     calculateMonth(birthdate) {
+      birthdate = new Date(birthdate)
       return Math.max(
         (today.getFullYear() - birthdate.getFullYear()) * 12 +
           today.getMonth() -

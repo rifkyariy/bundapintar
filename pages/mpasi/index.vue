@@ -2,7 +2,8 @@
   <div>
     <Navbar :title="title"/>
     <div>
-      <iframe class="w-full h-screen" src="assets/pdf/menu_makanan.pdf" frameborder="0"></iframe>
+      <img src="menu_makanan-" alt="">
+      <img v-for="index in 33" :key="index" class="pb-2" :src="'/assets/img/menu_makanan/menu_makanan-'+index+'.jpg'" alt="">
     </div>
   </div>
 </template>

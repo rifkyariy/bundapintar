@@ -31,7 +31,9 @@
       </div>
       <div>
         <div class="text-center px-4">
-          <h3 class="text-3xl text-yellow-300 font-bold w-full">Halo, {{ name}}</h3>
+          <h3 class="text-3xl text-yellow-300 font-bold w-full">
+            Halo, {{ name }}
+          </h3>
           <span class="text-white text-lg font-main"
             >Berikut status gizi kamu :</span
           >
@@ -47,7 +49,7 @@
               "
             >
               <span>Usia Kamu</span>
-              <h3>{{ birthdate }} ({{ age}} Bulan)</h3>
+              <h3>{{ birthdate }} ({{ age }} Bulan)</h3>
             </div>
             <div
               class="
@@ -60,7 +62,7 @@
               "
             >
               <span>BB / U</span>
-              <h3>{{BbU}}</h3>
+              <h3>{{ BbU }}</h3>
             </div>
             <div
               class="
@@ -73,7 +75,7 @@
               "
             >
               <span>TB / U</span>
-              <h3>{{TbU}}</h3>
+              <h3>{{ TbU }}</h3>
             </div>
             <div
               class="
@@ -86,14 +88,14 @@
               "
             >
               <span>BB / TB</span>
-              <h3>{{BbTb}}</h3>
+              <h3>{{ BbTb }}</h3>
             </div>
           </div>
 
           <div class="fixed bottom-4 full-btn">
             <button
               class="w-full text-white rounded-xl bg-yellow-400 p-4"
-               @click="$router.go(-1)"
+              @click="$router.go(-1)"
             >
               Kembali
             </button>
@@ -116,30 +118,57 @@ export default {
       BbU: '-',
       TbU: '-',
       BbTb: '-',
-      imgSrc: '/assets/img/boy_image.svg'
+      imgSrc: '/assets/img/boy_image.svg',
     }
   },
-  mounted () { 
+  mounted() {
     this.name = localStorage.name
     this.gender = localStorage.gender
     this.weight = localStorage.weight
     this.height = localStorage.height
     this.age = localStorage.age
+    this.birthdate = this.formatDate(localStorage.birthdate)
     this.BbU = localStorage.HasilBBU
     this.TbU = localStorage.HasilTBU
     this.BbTb = localStorage.HasilBBTB
 
-    if(this.gender === 'L' ){
-      this.imgSrc = '/assets/img/boy_image.svg' 
-    }else{
+    if (this.gender === 'L') {
+      this.imgSrc = '/assets/img/boy_image.svg'
+    } else {
       this.imgSrc = '/assets/img/girl_image.svg'
     }
-  }
+  },
+  methods: {
+    formatDate(rawDate) {
+      const monthNames = [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec',
+      ]
+
+      rawDate = new Date(rawDate)
+      const day = rawDate.getDate()
+      const monthIndex = rawDate.getMonth()
+      const monthName = monthNames[monthIndex]
+      const year = rawDate.getFullYear()
+
+      return `${day}/${monthName}/${year}`
+    },
+  },
 }
 </script>
 
 <style scoped>
-  .full-btn {
-    width: calc(100% - 2rem) !important
-  }
+.full-btn {
+  width: calc(100% - 2rem) !important;
+}
 </style>
