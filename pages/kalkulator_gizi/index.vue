@@ -253,6 +253,7 @@ export default {
       const birthdate = new Date(this.birthdate)
       const age = this.calculateMonth(birthdate)
 
+      // eslint-disable-next-line no-console
       console.log(
         name,
         ageRange,
@@ -278,9 +279,9 @@ export default {
         localStorage.setItem('HasilTBU', HasilTBU)
         localStorage.setItem('HasilBBTB', HasilBBTB)
 
-        console.log(HasilBBU, HasilTBU, HasilBBTB)
         this.$router.push('/kalkulator_gizi/result')
       } else {
+        // eslint-disable-next-line no-console
         console.log('Oops Bukan Balita')
       }
     },
@@ -302,10 +303,8 @@ export default {
       let CompareDatas = []
       if (gender === 'L') {
         CompareDatas = this.result.BbU.LakiLaki.data
-        console.log('bbu laki')
       } else {
         CompareDatas = this.result.BbU.Perempuan.data
-        console.log('bbu cewe')
       }
 
       const equalData = CompareDatas.filter(
@@ -325,8 +324,6 @@ export default {
           deviation = median - equalData[0].min1
         }
 
-        console.log(diff, deviation)
-
         const zScoreBB = diff / deviation
         if (zScoreBB < -3.0) {
           result = 'Berat Badan Sangat Kurang'
@@ -345,18 +342,14 @@ export default {
       let CompareDatas = []
       if (age <= 24) {
         CompareDatas = this.result.PbU
-        console.log(CompareDatas)
       } else {
         CompareDatas = this.result.TbU
-        console.log(CompareDatas)
       }
 
       if (gender === 'L') {
         CompareDatas = CompareDatas.LakiLaki.data
-        console.log('bbu laki', JSON.stringify(CompareDatas))
       } else {
         CompareDatas = CompareDatas.Perempuan.data
-        console.log('bbu cewe', JSON.stringify(CompareDatas))
       }
 
       const equalData = CompareDatas.filter(
@@ -394,10 +387,8 @@ export default {
       let CompareDatas = []
       if (gender === 'L') {
         CompareDatas = this.result.TbBb.LakiLaki.data
-        console.log('TbBb laki')
       } else {
         CompareDatas = this.result.TbBb.Perempuan.data
-        console.log('TbBb cewe')
       }
 
       const equalData = CompareDatas.filter(
@@ -416,7 +407,6 @@ export default {
           deviation = median - equalData[0].min1
         }
 
-        console.log(diff, deviation)
         const zScoreTBBB = diff / deviation
 
         if (zScoreTBBB < -3.0) {
