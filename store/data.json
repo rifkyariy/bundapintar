@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "title": "Tumbang Balita dan Stunting",
+    "img": "/assets/img/Kind of Icon=Default.svg",
+    "url": "/menu/Tumbang-Balita",
+    "slug": "tumbang_balita_dan_stunting"
+  },
+  {
+    "id": 2,
+    "title": "Gizi Seimbang",
+    "img": "/assets/img/Kind of Icon=Gizi Seimbang.svg",
+    "url": "/menu/Gizi-Seimbang",
+    "slug": "gizi_seimbang"
+  },
+  {
+    "id": 3,
+    "title": "Fungsi Zat Gizi",
+    "img": "/assets/img/Kind of Icon=Fungsi Zat Gizi.svg",
+    "url": "fungsi_zat_gizi",
+    "slug": "fungsi_zat_gizi"
+  },
+  {
+    "id": 4,
+    "title": "PMBA",
+    "img": "/assets/img/Kind of Icon=PMBA.svg",
+    "url": "pbma",
+    "slug": "pbma"
+  },
+  {
+    "id": 5,
+    "title": "Contoh MPASI",
+    "img": "/assets/img/Kind of Icon=Contoh MPASI.svg",
+    "url": "mpasi",
+    "slug": "mpasi"
+  },
+  {
+    "id": 6,
+    "title": "Kalkulator Gizi",
+    "img": "/assets/img/Kind of Icon=Kalkulator.svg",
+    "url": "kalkulator_gizi",
+    "slug": "kalkulator_gizi"
+  },
+  {
+    "id": 7,
+    "title": "Tentang Aplikasi",
+    "img": "/assets/img/Kind of Icon=Kalkulator.svg",
+    "url": "tentang_aplikasi",
+    "slug": "tentang_aplikasi"
+  }
+]
