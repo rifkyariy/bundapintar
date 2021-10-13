@@ -43,7 +43,7 @@
         >
           <option value="0" selected>0 - 5 Tahun</option>
           <option value="1">6 - 12 Tahun</option>
-          <option value="2">> 13 Tahun</option>
+          <option value="2"> >= 13 Tahun</option>
         </select>
       </div>
 
