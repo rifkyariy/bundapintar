@@ -39,40 +39,40 @@ export default {
           id: 1,
           title: 'Energi',
           url: '/kebutuhan_gizi/energi',
-          bImg: 'assets/img/menu_energi.svg'
+          bImg: 'assets/img/menu_energi.png'
         },
         {
           id: 2,
           title: 'Protein',
           url: '/kebutuhan_gizi/protein',
-          bImg: 'assets/img/menu_protein.svg'
+          bImg: 'assets/img/menu_protein.png'
         },
         {
           id: 3,
           title: 'Karbohidrat',
           url: '/kebutuhan_gizi/karbohidrat',
-          bImg: 'assets/img/menu_karbohidrat.svg'
+          bImg: 'assets/img/menu_karbohidrat.png'
 
         },
         {
           id: 4,
           title: 'Lemak',
           url: '/kebutuhan_gizi/lemak',
-          bImg: 'assets/img/menu_lemak.svg'
+          bImg: 'assets/img/menu_lemak.png'
 
         },
         {
           id: 5,
           title: 'Vitamin & Mineral',
           url: '/kebutuhan_gizi/vitamin_mineral',
-          bImg: 'assets/img/menu_vitamin.svg'
+          bImg: 'assets/img/menu_vitamin.png'
 
         },
         {
           id: 6,
           title: 'Cairan',
           url: '/kebutuhan_gizi/cairan',
-          bImg: 'assets/img/menu_cairan.svg'
+          bImg: 'assets/img/menu_cairan.png'
 
         },
       ],
