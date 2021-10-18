@@ -4,7 +4,7 @@
       <Navbar :title="title" />
       <img
         class="w-full rounded-b-xl"
-        src="/assets/img/menu_lemak.svg"
+        src="/assets/img/menu_lemak.png"
         alt=""
         srcset=""
       />

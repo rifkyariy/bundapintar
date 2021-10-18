@@ -5,7 +5,7 @@
 
       <img
         class="w-full rounded-b-xl"
-        src="/assets/img/menu_karbohidrat.svg"
+        src="/assets/img/menu_karbohidrat.png"
         alt=""
         srcset=""
       />

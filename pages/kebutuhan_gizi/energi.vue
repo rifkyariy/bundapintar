@@ -5,7 +5,7 @@
 
       <img
         class="w-full rounded-b-xl"
-        src="/assets/img/menu_energi.svg"
+        src="/assets/img/menu_energi.png"
         alt=""
         srcset=""
       />

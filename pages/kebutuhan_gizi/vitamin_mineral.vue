@@ -4,7 +4,7 @@
       <Navbar :title="title" />
       <img
         class="w-full rounded-b-xl"
-        src="/assets/img/menu_vitamin.svg"
+        src="/assets/img/menu_vitamin.png"
         alt=""
         srcset=""
       />
