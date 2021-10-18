@@ -2,7 +2,7 @@
   <div>
     <Navbar :title="title"/>
     <div>
-      <img v-for="index in 10" :key="index" class="pb-2" :src="'/assets/img/pbma/PBMA_'+index+'.png'" alt="">
+      <img v-for="index in 10" :key="index" class="pb-2" :src="'/assets/img/pbma/PBMA_'+index+'-min.png'" alt="">
     </div>
   </div>
 </template>
