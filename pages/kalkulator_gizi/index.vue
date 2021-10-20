@@ -178,6 +178,7 @@
 </template>
 
 <script>
+import moment from "moment";
 import BbULakiLaki from '~/store/calculator/bb_u_lk.json'
 import BbUPerempuan from '~/store/calculator/bb_u_pr.json'
 import PbBbLakiLaki from '~/store/calculator/pb_bb_lk.json'
@@ -251,7 +252,7 @@ export default {
       const weight = this.weight
       const height = this.height
       const birthdate = this.birthdate
-      const age = this.calculateMonth(birthdate)
+      const age = this.calculateMonthUsingMomentJS(birthdate)
 
       // eslint-disable-next-line no-console
       console.log(
@@ -284,6 +285,13 @@ export default {
         // eslint-disable-next-line no-console
         console.log('Oops Bukan Balita')
       }
+    },
+    calculateMonthUsingMomentJS(birthdate) {
+      birthdate = new Date(birthdate)
+      const month = moment([birthdate.getFullYear(), birthdate.getMonth(), birthdate.getDate()]).diff(moment(), 'months', true)
+      console.log(month);
+      
+      return Math.floor(Math.abs(month))
     },
     calculateMonth(birthdate) {
       birthdate = new Date(birthdate)
